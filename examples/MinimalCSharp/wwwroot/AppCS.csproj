@@ -76,21 +76,18 @@
   <ItemGroup>
     <Compile Include="UI\Page.aspx.cs">
       <DependentUpon>Page.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UI\Page.aspx.designer.cs">
       <DependentUpon>Page.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\Calculator.ascx.cs">
       <DependentUpon>Calculator.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UI\Calculator.ascx.designer.cs">
       <DependentUpon>Calculator.ascx</DependentUpon>
     </Compile>
     <Compile Include="UI\Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UI\Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>

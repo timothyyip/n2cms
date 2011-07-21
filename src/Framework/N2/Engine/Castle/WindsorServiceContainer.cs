@@ -51,6 +51,13 @@ namespace N2.Engine.Castle
 			container.Release(instance);
 		}
 
+        public override void AddComponentUsingFactoryMethod<T>(string key, LifestyleType lifeStyle, Func<T> factoryMethod)
+        {
+            var component = Component.For<T>().UsingFactoryMethod(factoryMethod).LifeStyle.Is(lifeStyle);
+            container.Register(component);
+        }
+
+
 		public override void AddComponentLifeStyle(string key, Type type, ComponentLifeStyle lifeStyle)
 		{
 			LifestyleType lifeStyleType = lifeStyle == ComponentLifeStyle.Singleton

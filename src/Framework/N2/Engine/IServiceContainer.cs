@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Castle.Core;
 using N2.Plugin;
 
 namespace N2.Engine
@@ -20,6 +21,8 @@ namespace N2.Engine
 
 		/// <summary>Registers the service of the specified type with the container, giving a number of properties for use during instantiation.</summary>
 		void AddComponentWithParameters(string key, Type serviceType, Type classType, IDictionary<string, string> properties);
+
+	    void AddComponentUsingFactoryMethod<T>(string key, LifestyleType lifeStyle, Func<T> factoryMethod);
 
 		/// <summary>Returns the first registered service of the given type.</summary>
 		T Resolve<T>();

@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using Castle.Core;
 using N2.Plugin;
 
 namespace N2.Engine.MediumTrust
@@ -16,6 +17,12 @@ namespace N2.Engine.MediumTrust
 		private readonly IDictionary<Type, object> container = new Dictionary<Type, object>();
 		private readonly IDictionary<Type, Func<Type, object>> resolvers = new Dictionary<Type, Func<Type, object>>();
 		private readonly IDictionary<Type, Func<Type, IEnumerable<object>>> listResolvers = new Dictionary<Type, Func<Type, IEnumerable<object>>>();
+
+        public override void AddComponentUsingFactoryMethod<T>(string key, LifestyleType lifeStyle, Func<T> factoryMethod)
+        {
+            throw new NotImplementedException();
+        }
+
 
 		public override void AddComponentLifeStyle(string key, Type serviceType, ComponentLifeStyle lifeStyle)
 		{
